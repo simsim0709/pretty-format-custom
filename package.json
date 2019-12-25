@@ -65,7 +65,6 @@
     "mkdirp": "^0.5.1",
     "mocha": "^6.0.2",
     "mock-fs": "^4.4.1",
-    "opencollective": "^1.0.3",
     "prettier": "^1.19.0",
     "prettylint": "^1.0.0",
     "progress": "^2.0.0",
@@ -94,7 +93,7 @@
     "lint-es5-build": "eslint --no-eslintrc --no-ignore --env=browser packages/*/build-es5",
     "lint:prettier": "yarn --silent lint:prettier:ci --fix",
     "lint:prettier:ci": "prettylint '**/*.{md,yml,yaml}' --ignore-path .gitignore",
-    "postinstall": "opencollective postinstall && yarn build",
+    "postinstall": "yarn build",
     "install-no-ts-build": "node scripts/remove-postinstall && yarn --no-progress --frozen-lockfile --ignore-engines && node scripts/build",
     "publish": "yarn build-clean && yarn build && lerna publish --silent",
     "test-ci-es5-build-in-browser": "karma start --single-run",
@@ -138,11 +137,6 @@
         }
       }
     ]
-  },
-  "collective": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/jest",
-    "logo": "https://opencollective.com/jest/logo.txt"
   },
   "engines": {
     "node": ">= 8"
